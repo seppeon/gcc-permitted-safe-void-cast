@@ -6864,7 +6864,7 @@ static bool is_permitted_void_cast(const constexpr_ctx * ctx, tree t, tree type,
  DR 1312.  */
 static bool is_banned_void_cast(const constexpr_ctx *ctx, tree t, tree type, tree op)
 {
-  if (not is_cast_from_void_ptr_to_obj_ptr(type, op))
+  if (!is_cast_from_void_ptr_to_obj_ptr(type, op))
   {
     return false;
   }
